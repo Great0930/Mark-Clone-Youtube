@@ -10,7 +10,7 @@ export default defineConfig({
             "@": resolve(__dirname, "src"), // 設置 `@` 指向 `src` 目錄
         },
     },
-    base: "./", // 設置打包路徑
+    base: process.env.NODE_ENV === 'production' ? '/Test-Clone-Youtube/' : './', // 設置打包路徑
     server: {
         port: 4000, // 設置服務啓動端口號
         open: true, // 設置服務啓動時是否自動打開瀏覽器

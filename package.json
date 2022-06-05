@@ -5,8 +5,9 @@
     "scripts": {
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
-        "preview": "vite preview",
-        "css": "tailwind build tailwind.css -o ./src/style/tailwind/index.css"
+        "preview": "vite preview --port 8080",
+        "css": "tailwind build tailwind.css -o ./src/style/tailwind/index.css",
+        "push_PROD": "sh deploy.sh prod" 
     },
     "dependencies": {
         "@headlessui/vue": "^1.6.4",
